@@ -1,6 +1,6 @@
-# fly.toml file generated for dfpersons on 2023-02-27T14:09:06Z
+# fly.toml file generated for sparkling-wave-4635 on 2023-02-27T14:25:38Z
 
-app = "dfpersons"
+app = "sparkling-wave-4635"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []

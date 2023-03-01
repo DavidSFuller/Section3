@@ -6,7 +6,7 @@
   "scripts": {
     "build:ui": "rm -rf build && cd ../Helsinki_Fullstack/Part2/phonebook/ && npm run build && cp -r build ../../Section3",
     "deploy": "fly deploy",
-    "deploy:fullfly": "npm run build:ui && npm run deploy",    
+    "deploy:fullfly": "npm run build:ui && npm run deploy",
     "deploy:fullrender": "npm run build:ui && git add . && git commit -m uibuild && git push",
     "logs:prod": "fly logs",
     "start": "node index.js",
@@ -20,13 +20,13 @@
   "author": "David Fuller",
   "license": "ISC",
   "bugs": {
-    cd ../../../
     "url": "https://github.com/DavidSFuller/Section3/issues"
   },
   "homepage": "https://github.com/DavidSFuller/Section3#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "mongoose": "^7.0.0",
     "morgan": "^1.10.0"
   },
   "devDependencies": {

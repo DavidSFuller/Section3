@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 //console.log('num args:',process.argv.length)
-if (process.argv.length<3 || process.argv.length===4 || process.argv.length>5) {
+if (process.argv.length<3 || process.argv.length>5) {
   console.log('usage: node mongo.js {password} [{name} {number}]')
   process.exit(1)
 }
@@ -30,13 +30,13 @@ if (process.argv.length===5) {
   })
   //console.log('new record:',person.name,person.number)
   person.save().then(result => {
-    console.log(name,'saved!')
+    console.log("added", name, number, 'to phonebook')
     mongoose.connection.close()
   })
 }
 else {
     console.log('phonebook:')
-    Person.find({}).then(result => {
+    Person.find(name ? {"name":name} : {}).then(result => {
         result.forEach(person => {
           console.log(person.name, person.number)
         })

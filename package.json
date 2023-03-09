@@ -4,7 +4,7 @@
   "description": "Backend Server for phonebook",
   "main": "index.js",
   "scripts": {
-    "build:ui": "rm -rf build && cd ../Helsinki_Fullstack/Part2/phonebook/ && npm run build && cp -r build ../../Section3",
+    "build:ui": "rm -rf build && cd ../Helsinki_Fullstack/Part2/phonebook && npm run build && cp -r build ../../../Section3/",
     "deploy": "fly deploy",
     "deploy:fullfly": "npm run build:ui && npm run deploy",
     "deploy:fullrender": "npm run build:ui && git add . && git commit -m uibuild && git push",
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/DavidSFuller/Section3#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^7.0.0",
     "morgan": "^1.10.0"

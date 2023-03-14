@@ -17,7 +17,7 @@ mongoose.set('strictQuery',false)
 mongoose.connect(url)
 
 const personSchema = new mongoose.Schema({
-  name: String, 
+  name: String,
   number: String
 })
 
@@ -30,13 +30,13 @@ if (process.argv.length===5) {
   })
   //console.log('new record:',person.name,person.number)
   person.save().then(result => {
-    console.log("added", name, number, 'to phonebook')
+    console.log('added', name, number, 'to phonebook')
     mongoose.connection.close()
   })
 }
 else {
   console.log('phonebook:')
-  Person.find(name ? {"name":name} : {}).then(result => {
+  Person.find(name ? { 'name':name } : {}).then(result => {
     result.forEach(person => {
       console.log(person.name, person.number)
     })

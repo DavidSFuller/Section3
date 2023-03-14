@@ -17,8 +17,8 @@ mongoose.set('strictQuery',false)
 mongoose.connect(url)
 
 const personSchema = new mongoose.Schema({
-    name: String, 
-    number: String
+  name: String, 
+  number: String
 })
 
 const Person = mongoose.model('Person', personSchema)
@@ -35,13 +35,13 @@ if (process.argv.length===5) {
   })
 }
 else {
-    console.log('phonebook:')
-    Person.find(name ? {"name":name} : {}).then(result => {
-        result.forEach(person => {
-          console.log(person.name, person.number)
-        })
-        mongoose.connection.close()
-      })
+  console.log('phonebook:')
+  Person.find(name ? {"name":name} : {}).then(result => {
+    result.forEach(person => {
+      console.log(person.name, person.number)
+    })
+    mongoose.connection.close()
+  })
 }
 
 

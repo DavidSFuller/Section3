@@ -1,20 +1,20 @@
-# fly.toml file generated for crimson-thunder-701 on 2023-02-27T16:45:51Z
+# fly.toml file generated for shy-night-2715 on 2023-03-10T11:10:51Z
 
-app = "crimson-thunder-701"
+app = "shy-night-2715"
 kill_signal = "SIGINT"
 kill_timeout = 5
-##processes = []
+processes = []
 
 [env]
   PORT = "8080"
-  
+
 [experimental]
   auto_rollback = true
 
 [[services]]
   http_checks = []
   internal_port = 8080
-##  processes = ["app"]
+  processes = ["app"]
   protocol = "tcp"
   script_checks = []
   [services.concurrency]

@@ -48,8 +48,6 @@ app.use(express.json())
 app.use(requestLogger)
 app.use(express.static('build'))
 
-let persons = []
-
 app.get('/', (request, response) => {
   response.send('<h1>This is Helsinki Full Stack Part 3</h1>')
 })
